@@ -23,15 +23,14 @@ public class Patient {
     private String lastName;
     @Column(nullable = false)
     private Gender gender;
-    @Column(nullable = false,name = "phone_number")
+    @Column(nullable = false, name = "phone_number")
     private String phoneNumber;
     @Column(name = "date_of_birth", nullable = false)
     private Date dateOfBirth;
     private String address;
-    @OneToMany(mappedBy = "patient",cascade = CascadeType.ALL,orphanRemoval = true)
-    private List<Appointment> appointment;
-
-
-
+    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Appointment> appointments;
 
 }
+
+
